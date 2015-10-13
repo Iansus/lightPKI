@@ -1,0 +1,7 @@
+certs/
+certsdb/
+private/
+req/
+index.txt*
+serial*
+*/**
