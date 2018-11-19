@@ -28,10 +28,10 @@ preserve        = no
 policy          = policy_match
 
 [ policy_match ]
-countryName             = match
-stateOrProvinceName     = match
-localityName            = supplied
-organizationName        = match
+countryName             = supplied
+stateOrProvinceName     = optional
+localityName            = optional
+organizationName        = optional
 organizationalUnitName  = optional
 commonName              = supplied
 emailAddress            = optional
@@ -84,7 +84,8 @@ emailAddress_max                = 64
 basicConstraints = CA:false
 subjectKeyIdentifier = hash
 authorityKeyIdentifier = keyid,issuer
-keyUsage = keyEncipherment
+keyUsage = keyEncipherment, digitalSignature
+extendedKeyUsage = serverAuth
 
 [ v3_req ]
 subjectAltName = email:move
